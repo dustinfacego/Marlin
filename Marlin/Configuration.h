@@ -135,7 +135,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Bugfix 10.6.22"
+#define CUSTOM_MACHINE_NAME "Bugfix 10.8.22"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -1243,7 +1243,7 @@
  *   https://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html
  */
 #if DISABLED(CLASSIC_JERK)
-  #define JUNCTION_DEVIATION_MM 0.08 // (mm) Distance from real junction edge
+  #define JUNCTION_DEVIATION_MM 0.09 // (mm) Distance from real junction edge
   #define JD_HANDLE_SMALL_SEGMENTS    // Use curvature estimation instead of just the junction angle
                                       // for small segments (< 1mm) with large junction angles (> 135°).
 #endif
@@ -2023,11 +2023,11 @@
 #define LCD_BED_TRAMMING
 
 #if ENABLED(LCD_BED_TRAMMING)
-  #define BED_TRAMMING_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
+  #define BED_TRAMMING_INSET_LFRB { 30, 30, 30 } // (mm) Left, Front, Right, Back insets
   #define BED_TRAMMING_HEIGHT      0.0        // (mm) Z height of nozzle at leveling points
   #define BED_TRAMMING_Z_HOP       4.0        // (mm) Z height of nozzle between leveling points
   //#define BED_TRAMMING_INCLUDE_CENTER       // Move to the center after the last corner
-  //#define BED_TRAMMING_USE_PROBE
+  #define BED_TRAMMING_USE_PROBE
   #if ENABLED(BED_TRAMMING_USE_PROBE)
     #define BED_TRAMMING_PROBE_TOLERANCE 0.1  // (mm)
     #define BED_TRAMMING_VERIFY_RAISED        // After adjustment triggers the probe, re-probe to verify
@@ -2051,7 +2051,7 @@
    *  |  1       2  |   | 1         4 |    | 1         2 |   | 2           |
    *  LF --------- RF   LF --------- RF    LF --------- RF   LF --------- RF
    */
-  #define BED_TRAMMING_LEVELING_ORDER { LF, RF, RB, LB }
+  #define BED_TRAMMING_LEVELING_ORDER {LB,LF}
 #endif
 
 /**
@@ -2214,9 +2214,9 @@
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_2_LABEL       "ABS"
-#define PREHEAT_2_TEMP_HOTEND 240
-#define PREHEAT_2_TEMP_BED    110
+#define PREHEAT_2_LABEL       "TPU"
+#define PREHEAT_2_TEMP_HOTEND 228
+#define PREHEAT_2_TEMP_BED    60
 #define PREHEAT_2_TEMP_CHAMBER 35
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
