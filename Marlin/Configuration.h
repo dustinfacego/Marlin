@@ -135,7 +135,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Bugfix 10.16.22"
+#define CUSTOM_MACHINE_NAME "Bugfix 10.17.22"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -663,9 +663,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp 41.71
-    #define DEFAULT_Ki   6.06
-    #define DEFAULT_Kd  71.81
+    #define DEFAULT_Kp 43.25
+    #define DEFAULT_Ki   6.19
+    #define DEFAULT_Kd  75.60
   #endif
 #endif
 
@@ -748,9 +748,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
- #define DEFAULT_bedKp 102.50
- #define DEFAULT_bedKi 20.48
- #define DEFAULT_bedKd 342.00
+ #define DEFAULT_bedKp 69.99
+ #define DEFAULT_bedKi 8.45
+ #define DEFAULT_bedKd 386.48
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -1651,7 +1651,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
